@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Conecta cuatro</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+    <body onload="juegoComienza();">
+        
+        <center>
+		<h1>Conecta 4</h1>
+		<div id="gameboard">
+			<div id="game_info">
+			</div>
+			<table id="game_table">
+				<thead>
+					<tr>
+						<td><button onclick="tirar(0);">1</button></td>
+						<td><button onclick="tirar(1);">2</button></td>
+						<td><button onclick="tirar(2);">3</button></td>
+						<td><button onclick="tirar(3);">4</button></td>
+						<td><button onclick="tirar(4);">5</button></td>
+						<td><button onclick="tirar(5);">6</button></td>
+						<td><button onclick="tirar(6);">7</button></td>
+					</tr>
+				</thead>
+				<script>
+				for (var row=0; row<=5; row++) {
+					document.writeln("<tr>");	
+					for (var col=0; col<=6; col++) {
+						document.writeln("<td id='square_" + row + "_"+ col +"' class='board_square'></td>");							
+					}
+					document.writeln("</tr>");	
+				}						
+										
+				</script>
+			</table>
+			<div id="game_status">
+			</div>
+        </div>
+
+        <button id="begin_game" onclick="window.location.reload();">Reiniciar</button>
+    </center>
+	</body>
+</html>
